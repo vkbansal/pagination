@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"baseUrl": "src",
+		"target": "ESNext",
+		"module": "ESNext",
+		"strict": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"moduleResolution": "Node",
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"declaration": true
+	},
+	"include": ["src"],
+	"exclude": ["src/*.test.ts"]
+}

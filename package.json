@@ -1,0 +1,28 @@
+{
+	"name": "@vkbansal/pagination",
+	"description": "Framework independent helpers for pagination",
+	"version": "0.1.0",
+	"type": "module",
+	"license": "MIT",
+	"main": "./dist/paginate.js",
+	"types": "./dist/paginate.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/paginate.js",
+			"type": "./dist/paginate.d.ts"
+		}
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"prebuild": "rm -rf dist",
+		"build": "tsc --outDir dist",
+		"prepublishOnly": "pnpm run build"
+	},
+	"devDependencies": {
+		"prettier": "^2.7.1",
+		"typescript": "^4.7.4",
+		"vitest": "^0.20.3"
+	}
+}
