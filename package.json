@@ -1,11 +1,29 @@
 {
 	"name": "@vkbansal/pagination",
 	"description": "Framework independent helpers for pagination",
+	"keywords": [
+		"pagination",
+		"paging"
+	],
 	"version": "0.1.0",
+	"author": {
+		"name": "Vivek Kumar Bansal",
+		"email": "contact@vkbansl.me",
+		"url": "https://vkbansal.me"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vkbansal/pagination.git"
+	},
 	"type": "module",
 	"license": "MIT",
 	"main": "./dist/paginate.js",
 	"types": "./dist/paginate.d.ts",
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE.md"
+	],
 	"exports": {
 		".": {
 			"import": "./dist/paginate.js",
@@ -16,6 +34,10 @@
 		"access": "public"
 	},
 	"scripts": {
+		"test": "vitest run",
+		"fmt": "prettier --plugin-search-dir=. --write 'src/**/*.{ts,tsx}'",
+		"fmtc": "prettier --plugin-search-dir=. --check 'src/**/*.{ts,tsx}'",
+		"typecheck": "tsc --noEmit",
 		"prebuild": "rm -rf dist",
 		"build": "tsc --outDir dist",
 		"prepublishOnly": "pnpm run build"
